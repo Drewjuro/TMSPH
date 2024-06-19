@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="article-container">
+    <div class="image-container">
+        <img src="../sdi_front-end-challenge-1/img/tmp-lalamove-partnership.webp" alt="Article Image">
+        <div class="date">
+            <span>07</span> MAY
+        </div>
+        <div class="share-button">
+            <a href="#" class="share-icon">
+                <i class="fas fa-share"></i> SHARE
+            </a>
+        </div>
+    </div>
+    <div class="author">Darwin Tumaneng</div>
+    <div class="title">Toyota Motor Philippines partners with Lalamove Automotive</div>
+    <div class="subtitle">Leading mobility company Toyota Motor Philippines (TMP) has partnered with leading logistics
+        provider Lalamove through its auto brand, Lalamove Automotive, with the introduction of the commercial vehicle
+        Toyota Lite Ace as a transport partner. Aspiring and existing Lalamove operators are now able to purchase the Lite
+        Ace Panel Van variant through this partnership, under Lalamove Automotive's Vehicle Ownership Program.</div>
+    <a class="read-more" href="#">READ ARTICLE</a>
+
+    <div class="pagination">
+        <a href="page1.html">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <span>...</span>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+        <a href="index.html">11</a>
+        <a href="page1.html">12</a>
+        <span class="active">13</span>
+        <a href="#">14</a>
+        <span>...</span>
+        <a href="#">56</a>
+        <a href="#">57</a>
+        <a href="#">&raquo;</a>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var paginationItems = document.querySelectorAll('.pagination a, .pagination span');
+
+    paginationItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            // Remove 'active' class from all items
+            paginationItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked item
+            this.classList.add('active');
+        });
+    });
+});
+</script>
+
+</body>
+</html>

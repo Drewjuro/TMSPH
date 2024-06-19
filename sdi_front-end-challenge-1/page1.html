@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="article-container">
+    <div class="image-container">
+        <img src="../sdi_front-end-challenge-1/img/tmsph-launches-toyota-rentacar.webp" alt="Article Image">
+        <div class="date">
+            <span>17</span> MAY
+        </div>
+        <div class="share-button">
+            <a href="#" class="share-icon">
+                <i class="fas fa-share"></i> SHARE
+            </a>
+        </div>
+    </div>
+    <div class="author">Darwin Tumaneng</div>
+    <div class="title">TMSPH launches Toyota Rent&#x3B1;Car</div>
+    <div class="subtitle">Toyota Mobility Solutions Philippines, Inc. (TMSPH) marked another milestone in its first year of
+        operations with the introduction of its new and exciting car rental service, the Toyota Rent&#x3B1;Car. This service
+        provides affordable and secure transportation through its convenient and flexible car rental options – both for
+        short-term and long-term use.</div>
+    <a class="read-more" href="#">READ ARTICLE</a>
+
+    <div class="pagination">
+        <a href="index.html">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <span>...</span>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+        <a href="index.html">11</a>
+        <span class="active">12</span>
+        <a href="page2.html">13</a>
+        <a href="#">14</a>
+        <span>...</span>
+        <a href="#">56</a>
+        <a href="#">57</a>
+        <a href="page2.html">&raquo;</a>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var paginationItems = document.querySelectorAll('.pagination a, .pagination span');
+
+    paginationItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            // Remove 'active' class from all items
+            paginationItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked item
+            this.classList.add('active');
+        });
+    });
+});
+</script>
+
+</body>
+</html>
